@@ -1,0 +1,101 @@
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - gosimple
+    - unused
+    - structcheck
+#    - varcheck
+    - deadcode
+    - ineffassign
+    - typecheck
+    - gofmt
+    - goimports
+    - misspell
+    - gocyclo
+    - dupl
+    - goconst
+    - gocritic
+    - nakedret
+    - unparam
+    - scopelint
+    - prealloc
+    - gochecknoinits
+    - gochecknoglobals
+    - interfacer
+    - unconvert
+    - stylecheck
+    - depguard
+    - dogsled
+    - funlen
+    - whitespace
+    - nestif
+    - makezero
+    - exportloopref
+    - exhaustive
+    - forcetypeassert
+    - godox
+    - nolintlint
+    - paralleltest
+    - testpackage
+    - thelper
+    - wrapcheck
+
+run:
+  timeout: 5m
+  tests: true
+  skip-dirs:
+    - vendor
+  skip-files:
+    - ".*\\.pb\\.go"
+  modules-download-mode: readonly
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - errcheck
+        - govet
+        - staticcheck
+        - gosimple
+        - unused
+#        - structcheck
+        - varcheck
+        - deadcode
+        - ineffassign
+        - typecheck
+        - gofmt
+        - goimports
+        - misspell
+        - gocyclo
+        - dupl
+        - goconst
+        - gocritic
+        - nakedret
+        - unparam
+        - scopelint
+        - prealloc
+        - gochecknoinits
+        - gochecknoglobals
+        - interfacer
+        - unconvert
+        - stylecheck
+        - depguard
+        - dogsled
+        - funlen
+        - whitespace
+        - nestif
+        - makezero
+        - exportloopref
+        - exhaustive
+        - forcetypeassert
+        - godox
+        - nolintlint
+        - paralleltest
+        - testpackage
+        - thelper
+        - wrapcheck
